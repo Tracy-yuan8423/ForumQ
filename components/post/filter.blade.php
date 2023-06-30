@@ -34,7 +34,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link px-0 pt-2 pb-1 me-4 dropdown-toggle @if (request('orderType')) border-bottom border-primary border-3 text-primary @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ fs_lang('rankNum') }}</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ request()->url().'?'.http_build_query(['orderType' => 'createDate']) }}">{{ fs_lang('contentNewList') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ request()->url().'?'.http_build_query(['orderType' => 'createdTime']) }}">{{ fs_lang('contentNewList') }}</a></li>
                             <li><a class="dropdown-item" href="{{ request()->url().'?'.http_build_query(['orderType' => 'comment']) }}">{{ fs_lang('contentActive') }}</a></li>
                             <li><a class="dropdown-item" href="{{ request()->url().'?'.http_build_query(['orderType' => 'like']) }}">{{ fs_lang('contentHotList') }}</a></li>
                         </ul>
