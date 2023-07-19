@@ -33,8 +33,8 @@
                     @endif
                     <form role="search" action="{{ fs_route(route('fresns.search.index')) }}" method="get">
                         <div class="input-group">
-                            <input class="form-control" type="search" value="{{ request('searchKey') }}" placeholder="{{ fs_lang('search') }}" aria-label="{{ fs_lang('search') }}">
                             <input type="hidden" name="searchType" value="post"/>
+                            <input class="form-control" type="search" name="searchKey" value="{{ request('searchKey') }}" placeholder="{{ fs_lang('search') }}" aria-label="{{ fs_lang('search') }}">
                             <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
                         </div>
                     </form>
