@@ -4,7 +4,7 @@
     "description": "新颖的信息流社区风格的主题模板，采用响应式设计，自适应电脑、平板电脑、移动设备。",
     "author": "Tracy",
     "authorLink": "https://marketplace.fresns.com/developer/tracy",
-    "version": "1.10.7",
+    "version": "1.10.8",
     "functions": true,
     "functionKeys": [
         {
@@ -72,7 +72,7 @@
             "description": "新穎的信息流社區風格的主題模板，採用回應式設計，自適應電腦、平板電腦、移動設備。",
             "save": "保存",
             "loadingConfig": "加載動效",
-            "quickPublishConfig": "快速發表帖子",
+            "quickPublishConfig": "快速發表貼文",
             "notificationConfig": "消息頁是否顯示",
             "option_tip": "請選擇...",
             "option_support": "支持",
