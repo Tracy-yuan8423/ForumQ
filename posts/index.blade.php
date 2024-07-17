@@ -17,14 +17,14 @@
             {{-- 中间内容 --}}
             <div class="col-sm-6">
                 {{-- 筛选 --}}
-                @include('components.post.filter')
+                @include('components.posts.filter')
 
                 {{-- 置顶帖子列表 --}}
                 @if (fs_sticky_posts())
                     <div class="bg-white rounded-bottom mb-2">
                         <ul class="list-unstyled mx-4 pt-3">
                             @foreach(fs_sticky_posts() as $sticky)
-                                @component('components.post.sticky', compact('sticky'))@endcomponent
+                                @component('components.posts.sticky', compact('sticky'))@endcomponent
                             @endforeach
                         </ul>
                     </div>
@@ -33,7 +33,7 @@
                 {{-- 帖子列表 --}}
                 <div class="clearfix" @if (fs_config('channel_post_query_state') != 1) id="fresns-list-container" @endif>
                     @foreach($posts as $post)
-                        @component('components.post.list', compact('post'))@endcomponent
+                        @component('components.posts.list', compact('post'))@endcomponent
                     @endforeach
                 </div>
 

@@ -15,10 +15,7 @@
                 {{-- 帖子列表 --}}
                 <article class="card clearfix">
                     @foreach($posts as $post)
-                        @component('components.post.list', compact('post'))@endcomponent
-                        @if (! $loop->last)
-                            <hr>
-                        @endif
+                        @component('components.posts.list', compact('post'))@endcomponent
                     @endforeach
                 </article>
 

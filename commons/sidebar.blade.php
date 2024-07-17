@@ -5,7 +5,7 @@
         <ul class="list-group-numbered px-3 pb-3">
             @foreach(fs_content_list('post', 'list') as $topPost)
                 <li class="list-group-item border-bottom py-2 text-nowrap text-truncate overflow-hidden mb-1">
-                    <a href="{{ fs_route(route('fresns.post.detail', ['pid' => $topPost['pid']])) }}" class="text-decoration-none link-dark">
+                    <a href="{{ route('fresns.post.detail', ['pid' => $topPost['pid']]) }}" class="text-decoration-none link-dark">
                         {{ $topPost['title'] ?? Str::limit(strip_tags($topPost['content']), 40) }}<br>
                         <span class="d-flex justify-content-between align-items-start mt-1">
                             <span class="text-secondary mt-1" style="font-size: 0.6rem;"><i class="bi bi-chat-square-dots"></i> {{ $topPost['commentCount'] }}</span>

@@ -17,18 +17,18 @@
             {{-- 中间内容 --}}
             <div class="col-sm-6">
                 {{-- 筛选 --}}
-                @include('components.post.filter')
+                @include('components.posts.filter')
 
                 {{-- 置顶帖子列表 --}}
                 @if (fs_sticky_posts() || fs_sticky_posts($group['gid']))
                     <div class="bg-white rounded-bottom mb-3">
                         <ul class="list-unstyled mx-4 pt-3">
                             @foreach(fs_sticky_posts() as $sticky)
-                                @component('components.post.sticky', compact('sticky'))@endcomponent
+                                @component('components.posts.sticky', compact('sticky'))@endcomponent
                             @endforeach
 
                             @foreach(fs_sticky_posts($group['gid']) as $groupSticky)
-                                @component('components.post.sticky', compact('groupSticky'))@endcomponent
+                                @component('components.posts.sticky', compact('groupSticky'))@endcomponent
                             @endforeach
                         </ul>
                     </div>
@@ -67,11 +67,7 @@
                             @case('posts')
                                 <div class="clearfix" id="fresns-list-container">
                                     @foreach($posts as $post)
-                                        @component('components.post.list', compact('post'))@endcomponent
-
-                                        @if (! $loop->last)
-                                            <hr>
-                                        @endif
+                                        @component('components.posts.list', compact('post'))@endcomponent
                                     @endforeach
                                 </div>
 
@@ -85,7 +81,7 @@
                             @case('comments')
                                 <div class="clearfix" id="fresns-list-container">
                                     @foreach($comments as $comment)
-                                        @component('components.comment.list', [
+                                        @component('components.comments.list', [
                                             'comment' => $comment,
                                             'detailLink' => true,
                                             'sectionAuthorLiked' => false,

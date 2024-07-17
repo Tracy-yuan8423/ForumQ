@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse list-group mt-2 mt-lg-0" id="fresnsMenus">
         {{-- 话题主页 --}}
         @if (fs_config('channel_hashtag_status'))
-            <a href="{{ fs_route(route('fresns.hashtag.index')) }}" class="list-group-item list-group-item-action {{ Route::is('fresns.hashtag.*') ? 'active' : '' }}">
+            <a href="{{ route('fresns.hashtag.index') }}" class="list-group-item list-group-item-action {{ Route::is('fresns.hashtag.*') ? 'active' : '' }}">
                 <img class="img-fluid" src="{{ fs_theme('assets') }}images/menu-hashtag-list.png" loading="lazy" width="36" height="36">
                 {{ fs_config('channel_hashtag_name') }}
             </a>
@@ -14,7 +14,7 @@
 
         {{-- 用户主页 --}}
         @if (fs_config('channel_user_status'))
-            <a href="{{ fs_route(route('fresns.user.index')) }}" class="list-group-item list-group-item-action {{ Route::is('fresns.user.*') ? 'active' : '' }}">
+            <a href="{{ route('fresns.user.index') }}" class="list-group-item list-group-item-action {{ Route::is('fresns.user.*') ? 'active' : '' }}">
                 <img class="img-fluid" src="{{ fs_theme('assets') }}images/menu-user-home.png" loading="lazy" width="36" height="36">
                 {{ fs_config('channel_user_name') }}
             </a>
@@ -22,7 +22,7 @@
 
         {{-- 帖子列表 --}}
         @if (fs_config('channel_post_list_status'))
-            <a href="{{ fs_route(route('fresns.post.list')) }}" class="list-group-item list-group-item-action {{ Route::is('fresns.post.*') ? 'active' : '' }}">
+            <a href="{{ route('fresns.post.list') }}" class="list-group-item list-group-item-action {{ Route::is('fresns.post.*') ? 'active' : '' }}">
                 <img class="img-fluid" src="{{ fs_theme('assets') }}images/menu-post-list.png" loading="lazy" width="36" height="36">
                 {{ fs_config('channel_post_list_name') }}
             </a>

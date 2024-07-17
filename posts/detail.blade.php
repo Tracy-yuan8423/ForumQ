@@ -17,7 +17,7 @@
             {{-- 中间内容 --}}
             <div class="col-sm-6">
                 <div class="card shadow-sm mb-4">
-                    @component('components.post.detail', compact('post'))@endcomponent
+                    @component('components.posts.detail', compact('post'))@endcomponent
                 </div>
 
                 <article class="card clearfix" id="commentList" name="commentList">
@@ -29,7 +29,7 @@
                     @if (fs_sticky_comments($post['pid']))
                         <div class="card-body bg-primary bg-opacity-10 mb-4">
                             @foreach(fs_sticky_comments($post['pid']) as $sticky)
-                                @component('components.comment.sticky', [
+                                @component('components.comments.sticky', [
                                     'sticky' => $sticky,
                                     'detailLink' => true,
                                     'sectionAuthorLiked' => true,
@@ -45,7 +45,7 @@
 
                     {{-- 评论列表 --}}
                     @foreach($comments as $comment)
-                        @component('components.comment.list', [
+                        @component('components.comments.list', [
                             'comment' => $comment,
                             'detailLink' => true,
                             'sectionAuthorLiked' => true,
